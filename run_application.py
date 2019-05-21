@@ -6,7 +6,7 @@ from tornado.options import define, options
 from application.server import Application
 
 # Define command line arguments
-define("port", default=3000, help="run on the given port", type=int)
+define("port", default=8000, help="run on the given port", type=int)
 
 
 def main():
@@ -16,7 +16,7 @@ def main():
     print("server is running on port {0}".format(port))
     http_server.listen(port)
     tornado.ioloop.IOLoop.current().start()
-
+    
 if __name__ == "__main__":
     try:
         main()
